@@ -1,4 +1,4 @@
-package edu.asestatuas.ricksy.buisiness;
+package edu.asestatuas.ricksy.buisiness.payment;
 
 import org.junit.Test;
 
