@@ -2,14 +2,24 @@ package edu.asestatuas.ricksy.buisiness.payment;
 
 public class CreditCard implements PaymentMethod {
 
-    private final CreditCard owner;
-    private final CreditCard number;
+    private final String owner;
+    private final String number;
     private double credit;
 
-    public CreditCard(String owner, String number) {
-        this.owner = new CreditCard(owner, number);
-        this.number = new CreditCard(owner, number);
+    CreditCard(String owner, String number) {
+        this.owner = owner;
+        this.number = number;
     }
+    @Override
+    public String owner() {
+        return this.owner;
+    }
+
+    @Override
+    public String number() {
+        return this.number;
+    }
+
     @Override
     public boolean pay(double credit) {
         return owner.pay(credit);
