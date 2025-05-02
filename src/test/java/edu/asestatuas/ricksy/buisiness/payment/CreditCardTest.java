@@ -20,21 +20,21 @@ public class CreditCardTest {
         assertEquals("4916119711304546", card.number());
     }
 
-/*    @Test
+    @Test
     public void payTestOK() {
         assertTrue(card.pay(2999.0));
         assertEquals(1.0, card.credit(), 0);
     }
 
-/*    @Test
+    @Test
     public void payTestNOTOKZERO() {
         assertFalse(card.pay(2999.1));
         assertEquals(3000, card.credit(), 0.1);
     }
 
-/*    @Test
+    @Test
     public void payTestNOTOK() {
         assertFalse(card.pay(4000));
         assertEquals(3000, card.credit(), 0);
-    }*/
+    }
 }
