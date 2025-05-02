@@ -4,14 +4,15 @@ public class CreditCard implements PaymentMethod {
 
     private final String owner;
     private final String number;
-    private double credit;
+    private double credit = 3000.0;
 
-    CreditCard(String owner, String number) {
+    public CreditCard(String owner, String number) {
         this.owner = owner;
         this.number = number;
     }
+
     @Override
-    public String owner() {
+    public String cardOwner() {
         return this.owner;
     }
 
@@ -20,8 +21,9 @@ public class CreditCard implements PaymentMethod {
         return this.number;
     }
 
-    @Override
-    public boolean pay(double credit) {
-        return owner.pay(credit);
+    public String toString(){
+        return "owner: " + this.owner + "\n"
+                + "number: " + this.number + "\n"
+                + "credit: " + this.credit + "EZI";
     }
 }
