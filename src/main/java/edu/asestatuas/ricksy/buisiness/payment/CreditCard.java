@@ -21,6 +21,20 @@ public class CreditCard implements PaymentMethod {
         return this.number;
     }
 
+    @Override
+    public double credit() {
+        return this.credit;
+    }
+
+    @Override
+    public boolean pay(double charge) {
+        if (charge <= this.credit - 1) {
+            this.credit -= charge;
+            return true;
+        }
+        return false;
+    }
+
     public String toString(){
         return "owner: " + this.owner + "\n"
                 + "number: " + this.number + "\n"
