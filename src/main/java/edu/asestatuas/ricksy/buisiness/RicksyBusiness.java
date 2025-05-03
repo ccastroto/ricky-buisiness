@@ -1,5 +1,6 @@
 package edu.asestatuas.ricksy.buisiness;
 
+import edu.asestatuas.ricksy.buisiness.dispatchers.UfosPark;
 import edu.asestatuas.ricksy.buisiness.payment.CreditCard;
 
 /**
@@ -55,7 +56,7 @@ public class RicksyBusiness {
          * El coste del ovni es de 500 EZIs.
          */
 
-/*        UfosPark ufosPark = new UfosPark();
+        UfosPark ufosPark = new UfosPark();
 
         // Da de alta en la flota de ovnis 2 UFOS.
 
@@ -65,7 +66,7 @@ public class RicksyBusiness {
         }
 
         // Procesamos el pago y reserva de ovni de Abradolph
-        ufosPark.dispatch(abradolph);
+            ufosPark.dispatch(abradolph);
 
         // Mostramos el ID del ovni asignado a Abradolph
         System.out.println("\nOvni de Abradolph\n" +
@@ -79,7 +80,7 @@ public class RicksyBusiness {
         // El sistema detecta que ya tiene uno
         // e ignora la petición.
 
-        System.out.println("\nAbradolph quiere otro ovni\n" +
+/*        System.out.println("\nAbradolph quiere otro ovni\n" +
                 "==========================");
         ufosPark.dispatch(abradolph);
         System.out.println("Su credito no ha cambiado: " + abradolph.credit());
