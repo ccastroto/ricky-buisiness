@@ -1,9 +1,11 @@
 package edu.asestatuas.ricksy.buisiness.dispatchers;
 
-import edu.asestatuas.ricksy.buisiness.payment.*;
-import edu.asestatuas.ricksy.buisiness.GuestDispatcher;
+import edu.asestatuas.ricksy.buisiness.payment.PaymentMethod;
+import edu.asestatuas.ricksy.buisiness.receptivo.GuestDispatcher;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Map;
+import java.util.HashMap;
 
 public class UfosPark {
 
@@ -16,9 +18,16 @@ public class UfosPark {
         flota.put(ufoID, null);
     }
 
-    public Collection<String> cardNumbers() {
-        return flota.keySet();
+    Collection<String> cardNumbers() {
+        return this.flota.values();
     }
+
+    public boolean containsCard(String cardNumber) {
+        return flota.containsValue(cardNumber);
+    }
+
+    public void dispatch(PaymentMethod card) {}
+
 
     @Override
     public String toString() {
