@@ -10,12 +10,12 @@ import java.util.HashMap;
 public class UfosPark {
 
     private double fee = 500d;
-    private  Map<String,String> flota = new HashMap<String,String>();
+    private final Map<String,String> flota = new HashMap<String,String>();
 
     public UfosPark() {}
 
     public void add(String ufoID) {
-        flota.put(ufoID, null);
+        flota.putIfAbsent(ufoID, null);
     }
 
     Collection<String> cardNumbers() {
