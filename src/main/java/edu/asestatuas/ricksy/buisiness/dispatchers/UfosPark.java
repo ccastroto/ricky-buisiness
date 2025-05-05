@@ -26,7 +26,20 @@ public class UfosPark {
         return flota.containsValue(cardNumber);
     }
 
-    public void dispatch(PaymentMethod card) {}
+    public void dispatch(PaymentMethod card) {
+        Map.Entry<String, String> ufo = null;
+        if (!flota.containsValue(cardNumbers())) {
+            for(Map.Entry<String,String> entry : this.flota.entrySet()) {
+                if (entry.getValue() == null) {
+                    ufo = entry;
+                    break;
+                }
+            }
+        }
+        if (ufo != null && card.pay(fee)) {
+            this.flota.put(ufo.getValue(), card.number());
+        }
+    }
 
 
     @Override
