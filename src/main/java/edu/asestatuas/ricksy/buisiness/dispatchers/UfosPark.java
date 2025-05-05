@@ -40,7 +40,7 @@ public class UfosPark implements GuestDispatcher {
             }
         }
         if (ufo != null && card.pay(fee)) {
-            this.flota.put(ufo.getValue(), card.number());
+            this.flota.put(ufo.getKey(), card.number());
         }
     }
 

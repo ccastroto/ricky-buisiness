@@ -76,7 +76,7 @@ public class UfosParkTest {
         assertEquals(2500, card.credit(), 0);
     }
 
-/*    @Test
+    @Test
     public void dispatchNoUfoAvaliableTest() {
         PaymentMethod abradolph = new CreditCard("Abradolf Lincler", "4916119711304546");
         ufos.dispatch(abradolph);
@@ -96,7 +96,7 @@ public class UfosParkTest {
         assertEquals(3000, morty.credit(), 0);
     }
 
-    @Test
+/*    @Test
     public void getUfoOfTest() {
         PaymentMethod card = new CreditCard("Abradolf Lincler", "4916119711304546");
         ufos.dispatch(card);
