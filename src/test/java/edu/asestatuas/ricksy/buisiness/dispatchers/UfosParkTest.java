@@ -96,11 +96,11 @@ public class UfosParkTest {
         assertEquals(3000, morty.credit(), 0);
     }
 
-/*    @Test
+    @Test
     public void getUfoOfTest() {
         PaymentMethod card = new CreditCard("Abradolf Lincler", "4916119711304546");
         ufos.dispatch(card);
-        assertTrue(ufos.toString().contains(ufos.getUfoOf(card.number())));
+        assertTrue(ufos.getUfoOf(card.number()).contains(ufos.toString()));
         assertEquals(2500, card.credit(), 0);
-    }*/
+        }
 }
