@@ -4,6 +4,7 @@ import edu.asestatuas.ricksy.buisiness.dispatchers.UfosPark;
 import edu.asestatuas.ricksy.buisiness.payment.CreditCard;
 import edu.asestatuas.ricksy.buisiness.dispatchers.CrystalExpender;
 import edu.asestatuas.ricksy.buisiness.payment.PaymentMethod;
+import edu.asestatuas.ricksy.buisiness.receptivo.Receptivo;
 
 /**
  * Ricksy Business
