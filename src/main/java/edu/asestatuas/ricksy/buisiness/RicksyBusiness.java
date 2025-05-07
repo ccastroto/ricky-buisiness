@@ -2,6 +2,7 @@ package edu.asestatuas.ricksy.buisiness;
 
 import edu.asestatuas.ricksy.buisiness.dispatchers.UfosPark;
 import edu.asestatuas.ricksy.buisiness.payment.CreditCard;
+import edu.asestatuas.ricksy.buisiness.dispatchers.CrystalExpender;
 
 /**
  * Ricksy Business
@@ -136,7 +137,7 @@ public class RicksyBusiness {
          * uno de ellos, que es de 50 EZIs
          */
 
-/*        CrystalExpender packExpender = new CrystalExpender(3, 50);
+        CrystalExpender packExpender = new CrystalExpender(3, 50);
 
         // Muestra el total de packs y su precio unidad
         System.out.println("\nPacks\n" +
