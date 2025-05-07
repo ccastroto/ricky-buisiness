@@ -12,6 +12,9 @@ public class CrystalExpender {
         this.stock = stock;
         this.itemCost = itemCost;
     }
+    public int stock() {
+        return this.stock;
+    }
     public void dispatch(PaymentMethod card) {
 
     }
