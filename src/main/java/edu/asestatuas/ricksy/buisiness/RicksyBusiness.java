@@ -80,7 +80,7 @@ public class RicksyBusiness {
         // El sistema detecta que ya tiene uno
         // e ignora la petición.
 
-/*        System.out.println("\nAbradolph quiere otro ovni\n" +
+       System.out.println("\nAbradolph quiere otro ovni\n" +
                 "==========================");
         ufosPark.dispatch(abradolph);
         System.out.println("Su credito no ha cambiado: " + abradolph.credit());
