@@ -200,7 +200,7 @@ public class RicksyBusiness {
 
         System.out.println("\nLLega Birdpearson!\n" +
                 "==================");
-/*        PaymentMethod birdpearson = new CreditCard("Birdpearson", "1111111111111111");
+        PaymentMethod birdpearson = new CreditCard("Birdpearson", "1111111111111111");
         receptivo.dispatch(birdpearson);
         mostrarReserva(birdpearson, packExpender, ufosPark);
 
