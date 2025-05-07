@@ -16,6 +16,8 @@ public class CrystalExpender {
         return this.stock;
     }
     public void dispatch(PaymentMethod card) {
-
+        if (this.stock > 0 && card.pay(this.itemCost)) {
+            this.stock -= 1;
+        }
     }
 }
