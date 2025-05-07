@@ -39,7 +39,7 @@ public class ReceptivoTest {
         assertSame(receptivo, otroReceptivo);
     }
 
-/*    @Test
+    @Test
     public void dispatchTest() {
 
         PaymentMethod card = new CreditCard("Abradolf Lincler", "4916119711304546");
@@ -50,7 +50,7 @@ public class ReceptivoTest {
         assertEquals(99, packExpender.stock());
     }
 
-/*    @Test
+    @Test
     public void dispatchNoCreditTest() {
 
         PaymentMethod card = new CreditCard("Abradolf Lincler", "4916119711304546");
@@ -60,6 +60,6 @@ public class ReceptivoTest {
         assertEquals(10, card.credit(), 0);
         assertFalse(parkTest.ufos.containsCard(card.number()));
         assertEquals(100, packExpender.stock());
-    }*/
+    }
 
 }
