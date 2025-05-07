@@ -1,5 +1,6 @@
 package edu.asestatuas.ricksy.buisiness;
 
+import edu.asestatuas.ricksy.buisiness.dispatchers.RickMenuDispatcher;
 import edu.asestatuas.ricksy.buisiness.dispatchers.UfosPark;
 import edu.asestatuas.ricksy.buisiness.payment.CreditCard;
 import edu.asestatuas.ricksy.buisiness.dispatchers.CrystalExpender;
@@ -229,7 +230,7 @@ public class RicksyBusiness {
 
         // tu código aquí
 
-/*        RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher();
+        RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher();
 
         receptivo.registra(MenuDispatcher);
 
@@ -249,7 +250,7 @@ public class RicksyBusiness {
         for (PaymentMethod card: cards) {
             System.out.println(card);
             System.out.println();
-        }*/
+        }
     }
 
     private static void mostrarReserva(PaymentMethod card, CrystalExpender expender, UfosPark ufos) {
