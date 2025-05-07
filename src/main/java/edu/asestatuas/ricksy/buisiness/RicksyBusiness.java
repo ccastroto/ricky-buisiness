@@ -3,6 +3,7 @@ package edu.asestatuas.ricksy.buisiness;
 import edu.asestatuas.ricksy.buisiness.dispatchers.UfosPark;
 import edu.asestatuas.ricksy.buisiness.payment.CreditCard;
 import edu.asestatuas.ricksy.buisiness.dispatchers.CrystalExpender;
+import edu.asestatuas.ricksy.buisiness.payment.PaymentMethod;
 
 /**
  * Ricksy Business
@@ -41,7 +42,7 @@ public class RicksyBusiness {
          * el crédito inicial es de 3000 EZIS
          */
 
-        CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
+        PaymentMethod abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
 
         System.out.println("\n" + "Tarjeta de Abradolph" + "\n" +
                 "===================="        );
@@ -67,7 +68,7 @@ public class RicksyBusiness {
         }
 
         // Procesamos el pago y reserva de ovni de Abradolph
-            ufosPark.dispatch(abradolph);
+        ufosPark.dispatch(abradolph);
 
         // Mostramos el ID del ovni asignado a Abradolph
         System.out.println("\nOvni de Abradolph\n" +
@@ -77,11 +78,11 @@ public class RicksyBusiness {
         // Mostramos el credito de la tarjeta de Abradolph
         System.out.println("Credito de Abradolph: " + abradolph.credit());
 
-        // Abradolph quiere reservar otro ovni.
+        // La dualidad en Abradolph quiere reservar otro ovni.
         // El sistema detecta que ya tiene uno
         // e ignora la petición.
 
-       System.out.println("\nAbradolph quiere otro ovni\n" +
+        System.out.println("\nAbradolph quiere otro ovni\n" +
                 "==========================");
         ufosPark.dispatch(abradolph);
         System.out.println("Su credito no ha cambiado: " + abradolph.credit());
@@ -94,9 +95,9 @@ public class RicksyBusiness {
 
         System.out.println("\nLLega GearHead!\n" +
                 "===============");
-        CreditCard gearHead = new CreditCard("Gearhead", "8888888888888888");
+        PaymentMethod gearHead = new CreditCard("Gearhead", "8888888888888888");
 
-        gearHead.pay(3000); // le vacían la cartera
+        gearHead.pay(2999); // le vacían la cartera
 
         ufosPark.dispatch(gearHead);
         System.out.println("Su credito es cero: " + gearHead.credit());
@@ -107,7 +108,7 @@ public class RicksyBusiness {
 
         System.out.println("\nLLega Squanchy!\n" +
                 "==============");
-        CreditCard squanchy = new CreditCard("Squanchy", "4444444444444444");
+        PaymentMethod squanchy = new CreditCard("Squanchy", "4444444444444444");
         ufosPark.dispatch(squanchy);
         System.out.println("Su credito es: " + squanchy.credit());
         System.out.println("Su ovni es: " + ufosPark.getUfoOf(squanchy.number()));
@@ -117,7 +118,7 @@ public class RicksyBusiness {
 
         System.out.println("\nAlgun ovni para Morty?\n" +
                 "======================");
-        CreditCard morty = new CreditCard("Morty", "0000000000000000");
+        PaymentMethod morty = new CreditCard("Morty", "0000000000000000");
         ufosPark.dispatch(morty);
         System.out.println("Su credito no ha cambiado: " + morty.credit());
         System.out.println("No hay ovni Morty: " + ufosPark.getUfoOf(morty.number()));
@@ -170,7 +171,7 @@ public class RicksyBusiness {
          * y CrystalDispatcher al receptivo
          */
 
-/*        Receptivo receptivo = new Receptivo();
+        Receptivo receptivo = Receptivo.getReceptivo();
         receptivo.registra(packExpender);
         receptivo.registra(ufosPark);
 
@@ -198,7 +199,7 @@ public class RicksyBusiness {
 
         System.out.println("\nLLega Birdpearson!\n" +
                 "==================");
-        CreditCard birdpearson = new CreditCard("Birdpearson", "1111111111111111");
+/*        PaymentMethod birdpearson = new CreditCard("Birdpearson", "1111111111111111");
         receptivo.dispatch(birdpearson);
         mostrarReserva(birdpearson, packExpender, ufosPark);
 
@@ -222,15 +223,38 @@ public class RicksyBusiness {
          * al ovni y al pack de bienvenida.
          * Hay 100 RickMenús y su precio es de 10 EZIs.
          * Muestra el total de pedidos y la lista de
-         * invitados/as que han hecho un pedido.
+         * invitados/as (numero de tarjeta) que han hecho un pedido.
          */
 
         // tu código aquí
+
+/*        RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher();
+
+        receptivo.registra(MenuDispatcher);
+
+        PaymentMethod[] cards = {abradolph, squanchy, morty, gearHead, birdpearson};
+
+        for (PaymentMethod card: cards) {
+            receptivo.dispatch(card);
+        }
+
+        System.out.println("\nPedidos de RickMenus:\n" +
+                "=====================");
+        System.out.println(MenuDispatcher);
+
+        System.out.println("\nCreditos de los invitados/as:\n" +
+                "=============================");
+
+        for (PaymentMethod card: cards) {
+            System.out.println(card);
+            System.out.println();
+        }*/
     }
 
-/*    private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {
+    private static void mostrarReserva(PaymentMethod card, CrystalExpender expender, UfosPark ufos) {
         System.out.println(card);
         System.out.println("Packs: " + expender.stock());
         System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
-    }*/
+    }
+
 }
