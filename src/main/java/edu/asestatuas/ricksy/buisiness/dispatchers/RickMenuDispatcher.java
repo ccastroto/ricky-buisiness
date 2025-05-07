@@ -22,6 +22,11 @@ public class RickMenuDispatcher implements GuestDispatcher {
             this.orders.add(card.cardOwner());
         }
     }
+    @Override
+    public String toString(){
+        return "stock: " + this.stock + "\n"
+                + this.orders.toString();
+    }
 
 
 }
