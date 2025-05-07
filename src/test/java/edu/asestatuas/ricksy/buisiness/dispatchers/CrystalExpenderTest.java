@@ -25,7 +25,7 @@ public class CrystalExpenderTest {
         assertEquals(100, expender.stock());
     }
 
-/*    @Test
+    @Test
     public void dispatchTestOK() {
         PaymentMethod card = new CreditCard("Abradolf Lincler", "4916119711304546");
         expender.dispatch(card);
