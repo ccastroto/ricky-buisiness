@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.asestatuas</groupId>
-  <artifactId>ricky-buisiness</artifactId>
+  <artifactId>ricky-business</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>ricky-buisiness</name>
-  <url>http://maven.apache.org</url>
+  <name>ricky-business</name>
+  <url>https://github.com/ccastroto/ricky-buisiness.git</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,7 +33,7 @@
             <index>true</index>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>edu.asestatuas</mainClass>
+              <mainClass>edu.asestatuas.ricksy.buisiness.RicksyBusiness</mainClass>
             </manifest>mvn -X
             <manifestEntries>
               <mode>development</mode>
